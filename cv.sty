@@ -1,0 +1,24 @@
+\ProvidesPackage{cv}
+
+\RequirePackage{tgpagella} % set the default font
+\RequirePackage[utf8]{inputenc} % For input encoding
+\RequirePackage[a4paper, margin=0.75in]{geometry}
+\RequirePackage[defernumbers=true]{biblatex}
+\RequirePackage[pagestyles]{titlesec} % it also loads titleps
+\RequirePackage{parskip} % avoiding indent at the begining of paragraph
+\RequirePackage{tabularx} % tabular with auto-adjusted column width
+\RequirePackage[colorlinks=true, allcolors=black]{hyperref}
+
+\titleformat{\section}{\fontfamily{phv}\large\bfseries}{}{0em}{}[\titlerule] % Section title format
+\titleformat{\subsection}{\fontfamily{phv}\normalsize\bfseries}{}{0em}{} % Subsection title format
+
+\renewpagestyle{plain}{\setfoot{}{\thepage}{\small\today}}
+\pagestyle{plain}
+
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
+
+\makeatletter
+\renewcommand{\maketitle}{{\fontfamily{phv}\Large\bfseries\@author}\\}
+\makeatother
+
+\renewcommand{\arraystretch}{1.2} % adding more space between tabular rows

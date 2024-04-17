@@ -1,0 +1,39 @@
+# gitignore for a LaTeX document
+
+# pdf is an output
+*.pdf
+
+# recovery files
+*~
+
+# pdflatex auxiliary files:
+*.aux
+*.toc
+*.ilg
+*.fls
+*.ind
+*.log
+*.out
+*.spl
+*.idx
+*.lof
+*.lot
+
+# bibliography auxiliary files:
+*.bbl
+*.bcf
+*.blg
+*-blx.bib
+
+# build auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex*
+*.run.xml
+*.DS_Store
+
+# files that are not latex
+*.doc
+*.docx
+*.xls
+*.xlsx
