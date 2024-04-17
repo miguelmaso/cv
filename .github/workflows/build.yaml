@@ -29,4 +29,4 @@ jobs:
         with:
           branch-suffix: "-cv"
           path: cv.pdf
-          githu-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.GITHUB_TOKEN}}
