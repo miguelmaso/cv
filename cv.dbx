@@ -1,0 +1,29 @@
+\DeclareDatamodelFields[type=field,datatype=literal]{from,to,pi,financing}
+\DeclareDatamodelEntryfields[project]{from,to,pi,financing}
+
+\NewBibliographyString{from}
+\NewBibliographyString{to}
+\NewBibliographyString{financing}
+
+\DefineBibliographyStrings{english}{
+  from      = {From},
+  to        = {To},
+  financing = {Financing entity}
+}
+\DefineBibliographyStrings{spanish}{
+  from      = {Desde},
+  to        = {Hasta},
+  financing = {Entidad financiadora}
+}
+\DefineBibliographyStrings{catalan}{
+  from      = {Desde},
+  to        = {Fins},
+  financing = {Entitat finançadora}
+}
+
+\DeclareBibliographyDriver{project}{%
+  \printfield{title}\par
+  \printtext{\bibstring{financing}: }\printfield{financing}\par
+  \printtext{\bibstring{from}: }\printfield{from} \printtext{ \bibstring{to}: }\printfield{to}\par
+  \printtext{PI: }\printfield{pi}%
+}

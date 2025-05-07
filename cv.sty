@@ -4,7 +4,7 @@
 \RequirePackage[utf8]{inputenc} % for input encoding
 \RequirePackage[T1]{fontenc} % font output encoding
 \RequirePackage[a4paper, margin=0.75in]{geometry}
-\RequirePackage[defernumbers=true,sorting=ydnt]{biblatex}
+\RequirePackage[style=authoryear,defernumbers=true,sorting=ydnt,dashed=false,datamodel=cv]{biblatex}
 \RequirePackage[pagestyles]{titlesec} % it also loads titleps
 \RequirePackage{parskip} % avoiding indent at the begining of paragraph
 \RequirePackage{tabularx} % tabular with auto-adjusted column width
@@ -24,3 +24,6 @@
 \makeatother
 
 \renewcommand{\arraystretch}{1.2} % adding more space between tabular rows
+
+\setlength\bibitemsep{8pt} % space between bib entries
+\setlength\bibhang{0pt} % removing indentation
