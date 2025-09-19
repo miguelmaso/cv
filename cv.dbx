@@ -22,8 +22,8 @@
 }
 
 \DeclareBibliographyDriver{project}{%
-  \printfield{title}\par
-  \printtext{\bibstring{financing}: }\printfield{financing}\par
-  \printtext{\bibstring{from}: }\printfield{from} \printtext{ \bibstring{to}: }\printfield{to}\par
-  \printtext{PI: }\printfield{pi}%
+  \printtext{\hspace{0.5em}}\printfield{title}\par
+  \printtext{\hspace{0.5em}\bibstring{financing}: }\printfield{financing}\par
+  \printtext{\hspace{0.5em}\bibstring{from}: }\printfield{from} \printtext{ \bibstring{to}: }\printfield{to}\par
+  \printtext{\hspace{0.5em}PI: }\printfield{pi}%
 }
