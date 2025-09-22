@@ -23,6 +23,16 @@
 \renewcommand{\maketitle}{{\fontfamily{phv}\Large\bfseries\@author}\\}
 \makeatother
 
+\let\origtabularx\tabularx
+\let\endorigtabularx\endtabularx
+
+\renewenvironment{tabularx}[2]{%
+  \origtabularx{#1}{@{}#2@{}}%  Added @{} to remove extra space before after columns
+}{%
+  \endorigtabularx
+}
+\newcolumntype{C}{>{\centering\arraybackslash}X} % centered version of 'X' col. type
+
 \renewcommand{\arraystretch}{1.3} % adding more space between tabular rows
 
 \setlength\bibitemsep{8pt} % space between bib entries
