@@ -18,7 +18,7 @@ jobs:
       - name: Set up LaTeX environment
         uses: TeX-Live/setup-texlive-action@v3
         with:
-          package-file: .github/workflows/tl_packages.txt
+          packages: scheme-medium
 
       - name: Build LaTeX
         run: latexmk -pdf cv
