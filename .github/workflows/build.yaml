@@ -10,12 +10,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: danteev/texlive:latest
 
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
+
+      - name: Set up LaTeX environment
+        uses: TeX-Live/setup-texlive-action@v3
+        with:
+          package-file: .github/workflows/tl_packages.txt
 
       - name: Build LaTeX
         run: |
