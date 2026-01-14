@@ -21,11 +21,7 @@ jobs:
           package-file: .github/workflows/tl_packages.txt
 
       - name: Build LaTeX
-        run: |
-          pdflatex cv
-          biber    cv
-          pdflatex cv
-          pdflatex cv
+        run: latexmk -pdf cv
 
       - name: Publish PDF as release asset
         if: success()
