@@ -1,1 +1,1 @@
-[cv](https://github.com/miguelmaso/cv/raw/main-cv/cv.pdf)
+[cv](https://github.com/miguelmaso/cv/releases/download/latest/cv.pdf)
