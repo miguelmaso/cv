@@ -1,12 +1,1 @@
-scheme-basic
-latexmk
-biber
-biblatex
-csquotes
-geometry
-hyperref
-parskip
-tabularx
-titlesec
-babel
-tex-gyre
+scheme-medium
