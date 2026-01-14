@@ -10,3 +10,4 @@ tabularx
 titlesec
 babel
 tex-gyre
+texlive-fonts-recommended
