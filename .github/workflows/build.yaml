@@ -1,31 +1,31 @@
-name: Build LaTeX
+name: Build LaTeX and publish PDF
 
 on:
   push:
     branches: [ "main" ]
     paths-ignore:
       - '**.md'
-      - '**.yml'
-      - '**.yaml'
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: danteev/texlive:latest
+
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
-      - name: Build LaTeX
-        run: |
-          pdflatex cv
-          biber    cv
-          pdflatex cv
-          pdflatex cv
-      - name: Copy to orphan branch
-        if: success()
-        uses: dfm/force-push-branch-action@v1
+
+      - name: Set up LaTeX environment
+        uses: TeX-Live/setup-texlive-action@v3
         with:
-          branch-suffix: "-cv"
-          path: cv.pdf
+          packages: scheme-medium
+
+      - name: Build LaTeX
+        run: latexmk -pdf cv
+
+      - name: Publish PDF as release asset
+        if: success()
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          files: cv.pdf

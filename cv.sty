@@ -11,8 +11,10 @@
 \RequirePackage[colorlinks=true, allcolors=black]{hyperref}
 \RequirePackage{csquotes} % support for quotes depending language
 
-\titleformat{\section}{\fontfamily{phv}\large\bfseries}{}{0em}{}[\titlerule] % Section title format
-\titleformat{\subsection}{\fontfamily{phv}\normalsize\bfseries}{}{0em}{} % Subsection title format
+\renewcommand{\sfdefault}{qhv} % TeX Gyre Heros (Helvetica-like, better support than phv)
+
+\titleformat{\section}{\fontfamily{qhv}\large\bfseries}{}{0em}{}[\titlerule] % Section title format
+\titleformat{\subsection}{\fontfamily{qhv}\normalsize\bfseries}{}{0em}{} % Subsection title format
 
 \renewpagestyle{plain}{\setfoot{}{\thepage}{\small\today}}
 \pagestyle{plain}
@@ -20,7 +22,7 @@
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}
 
 \makeatletter
-\renewcommand{\maketitle}{{\fontfamily{phv}\Large\bfseries\@author}\\}
+\renewcommand{\maketitle}{{\fontfamily{qhv}\Large\bfseries\@author}\\}
 \makeatother
 
 \let\origtabularx\tabularx
