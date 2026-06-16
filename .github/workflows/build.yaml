@@ -18,7 +18,7 @@ jobs:
       - name: Set up LaTeX environment
         uses: TeX-Live/setup-texlive-action@v4
         with:
-          packages: scheme-medium
+          packages: scheme-full
 
       - name: Show installed packages
         run: tlmgr info titlesec
