@@ -20,6 +20,9 @@ jobs:
         with:
           packages: scheme-medium
 
+      - name: Show installed packages
+        run: tlmgr info titlesec
+
       - name: Build LaTeX
         run: latexmk -pdf cv
 
