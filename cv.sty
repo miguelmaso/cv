@@ -8,6 +8,12 @@
 \RequirePackage[pagestyles]{titlesec} % it also loads titleps
 \RequirePackage{parskip} % avoiding indent at the begining of paragraph
 \RequirePackage{tabularx} % tabular with auto-adjusted column width
+\RequirePackage{ltablex} % combine the features of tabularx with longtable
+\keepXColumns                   % X columns always take the full specified width
+\setlength{\LTpre}{0pt}         % no extra space above longtables
+\setlength{\LTpost}{0pt}        % no extra space below
+\setlength{\LTleft}{0pt}        % left-aligned instead of centred
+\setlength{\LTright}{0pt}
 \RequirePackage[colorlinks=true, allcolors=black]{hyperref}
 \RequirePackage{csquotes} % support for quotes depending language
 \RequirePackage{fontawesome5} % web icons
