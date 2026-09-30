@@ -1,5 +1,14 @@
-\DeclareDatamodelFields[type=field,datatype=literal]{from,to,pi,financing}
-\DeclareDatamodelEntryfields[project]{from,to,pi,financing}
+\DeclareDatamodelFields[type=field,datatype=literal]{from,to,financing}
+\DeclareDatamodelFields[type=list,datatype=name]{pi}
+\DeclareDatamodelEntrytypes{project}
+\DeclareDatamodelEntryfields[project]{title,from,to,pi,financing}
+\DeclareDatamodelConstraints[project]{
+  \constraint[type=mandatory]{\constraintfield{title}}
+  \constraint[type=mandatory]{\constraintfield{from}}
+  \constraint[type=mandatory]{\constraintfield{to}}
+  \constraint[type=mandatory]{\constraintfield{pi}}
+  \constraint[type=mandatory]{\constraintfield{financing}}
+}
 
 \NewBibliographyString{from}
 \NewBibliographyString{to}
@@ -19,7 +28,7 @@
   financing = {Entidad financiadora}
 }
 \DefineBibliographyStrings{catalan}{
-  from      = {Desde},
+  from      = {Des de},
   to        = {Fins},
   pi        = {IP},
   financing = {Entitat finançadora}
@@ -29,5 +38,5 @@
   \printfield{title}\par
   \printtext{\bibstring{financing}: }\printfield{financing}\par
   \printtext{\bibstring{from}: }\printfield{from} \printtext{ \bibstring{to}: }\printfield{to}\par
-  \printtext{\bibstring{pi}: }\printfield{pi}%
+  \printtext{\bibstring{pi}: }\printnames{pi}%
 }
