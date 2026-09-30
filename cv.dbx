@@ -3,21 +3,25 @@
 
 \NewBibliographyString{from}
 \NewBibliographyString{to}
+\NewBibliographyString{pi}
 \NewBibliographyString{financing}
 
 \DefineBibliographyStrings{english}{
   from      = {From},
   to        = {To},
+  pi        = {PI},
   financing = {Financing entity}
 }
 \DefineBibliographyStrings{spanish}{
   from      = {Desde},
   to        = {Hasta},
+  pi        = {IP},
   financing = {Entidad financiadora}
 }
 \DefineBibliographyStrings{catalan}{
   from      = {Desde},
   to        = {Fins},
+  pi        = {IP},
   financing = {Entitat finançadora}
 }
 
@@ -25,5 +29,5 @@
   \printfield{title}\par
   \printtext{\bibstring{financing}: }\printfield{financing}\par
   \printtext{\bibstring{from}: }\printfield{from} \printtext{ \bibstring{to}: }\printfield{to}\par
-  \printtext{PI: }\printfield{pi}%
+  \printtext{\bibstring{pi}: }\printfield{pi}%
 }
