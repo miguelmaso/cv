@@ -1,182 +1,166 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 
 \usepackage[spanish]{babel}
 \usepackage{cv}
 
 \addbibresource{cv.bib}
 
-\author{Dr. Ing. Miguel Masó}
+\author{Miguel Masó, PhD}
 
 \begin{document}
 \maketitle
-\email{miguel.maso@socotec.com} \qquad +34 717 712 217 \\
-Ciudad: Barcelona (08034) \qquad
-Fecha de nacim.: 9/4/1989 \qquad
-ORCID: 0000-0003-0962-8550
+\begin{tabularx}{\linewidth}{lCr}
+\email{miguel.maso@upc.edu} &
++34 717 712 217 &
+Ing. de Caminos, Nº 36285\\[-.2em]
+Ciudad: Barcelona (08006) &
+Fecha de nac.: 9/4/1989 &
+\href{https://www.linkedin.com/in/miguel-maso/}{\faLinkedin \ miguel-maso}
+\href{https://github.com/miguelmaso}{\faGithub \ miguelmaso} \\[-.2em]
+& & \href{https://orcid.org/0000-0003-0962-8550}{\faOrcid \ 0000-0003-0962-8550} \\[2em]
+\end{tabularx}
+
+
+\section{Perfil investigador}
+Ingeniero de Caminos y Doctor en mecánica computacional, con experiencia investigadora desde 2017 en métodos de elementos finitos, acoplamiento multifísico y desarrollo de software científico (Julia, C++, Python). Mi trabajo doctoral en CIMNE abordó formulaciones estabilizadas de elementos finitos y el acoplamiento de solvers lagrangianos y eulerianos para flujos con superficie libre e interacción fluido--estructura (método de elementos finitos de partículas, ecuaciones de aguas poco profundas).
+
+Como investigador postdoctoral trabajo en marcos constitutivos termodinámicamente consistentes para polímeros electroactivos en grandes deformaciones, y en su implementación en Julia, incluyendo HyperFEM.jl, una librería distribuida de elementos finitos basada en Gridap.jl y diseñada para ejecutarse en clústeres Linux.
+
+Este perfil investigador se complementa con tres años de experiencia industrial aplicando simulación numérica a gran escala y automatización de software a estructuras reales, y con docencia universitaria en dinámica de estructuras y métodos numéricos en la UPC.
+
+
+\section{Formación académica}
+\begin{tabularx}{\linewidth}{lX}
+    2017 -- 2022 &
+    \textbf{PhD in Civil Engineering} (Doctorado en Ingeniería Civil) \newline
+    UPC, Barcelona, España \newline
+    \emph{Tesis}: Coupling shallow water models with three-dimensional models for the study of fluid-structure interaction problems using the particle finite element method. \\
+
+    2007 -- 2013 &
+    \textbf{Ingeniero de Caminos, Canales y Puertos} (equivalente a máster en Ingeniería Civil) \newline
+    UPC, Barcelona, España \\
+
+    2013 -- 2015 &
+    \textbf{Bachelor's degree in Philosophy and Theology} \newline
+    Pontificia Università della Santa Croce, Roma, Italia \\
+\end{tabularx}
 
 
 \section{Historial profesional}
 \begin{tabularx}{\linewidth}{lX}
-    2022 - actual &
-    \textbf{SOCOTEC Spain} - Estructuras \newline
-    Ingeniero Especialista, Responsable de innovación y desarrollo \\
+    2025 -- 2026 &
+    \textbf{Centro Internacional de Métodos Numéricos en la Ingeniería (CIMNE)} \newline
+    Investigador postdoctoral \\
 
-    2022 - actual &
+    2022 -- \enspace \dots &
     \textbf{Universitat Politècnica de Catalunya (UPC)} - Escuela Técnica Superior de Ingeniería de Caminos, Canales y Puertos de Barcelona \newline
-    Profesor asociado \\ 
+    Profesor asociado \\
 
-    2017 - 2022 &
+    2022 -- 2025 &
+    \textbf{SOCOTEC Spain} - Edificación y ciudades \newline
+    Ingeniero especialista, responsable de desarrollo e innovación \\
+
+    2017 -- 2022 &
     \textbf{Centro Internacional de Métodos Numéricos en la Ingeniería (CIMNE)} \newline
     Estudiante de doctorado con beca FPI \\
 \end{tabularx}
 
 
-\section{Educación}
+\section{Publicaciones}
+\printbibliography[heading={subbibliography}, title={Artículos en revistas}, type=article]
+\printbibliography[heading={subbibliography}, title={Manuscritos en preparación}, type=unpublished]
+\printbibliography[heading={subbibliography}, title={Tesis doctoral}, type=thesis]
+
+
+\section{Contribuciones en congresos}
+\printbibliography[heading=none, type=inproceedings]
+
+
+\printbibliography[heading={bibintoc}, title={Participación en proyectos de I+D+i}, type=project]
+
+
+\section{Software científico y contribuciones de código abierto}
+\begin{itemize}
+    \item \href{https://github.com/kratosmultiphysics/kratos}{\textbf{KratosMultiphysics}} -- Librería para el desarrollo de software de simulación paralelo multi disciplinario. Modular, extensible, HPC. Escrito en C++ con una extensiva interfaz en Pythonn.
+    \item \href{https://github.com/MultiSimOLab/HyperFEM.jl}{\textbf{HyperFEM.jl}} -- Librería distribuida de elementos finitos en Julia, basada en Gridap.jl, para la simulación de problemas hiperelásticos y multifísicos en grandes deformaciones en clústeres Linux.
+    \item \href{https://github.com/miguelmaso/HyperCalibration.jl}{\textbf{HyperCalibration.jl}} -- Paquete público de Julia para la calibración de modelos constitutivos hiperelásticos a partir de datos experimentales, organizado en datos experimentales, modelización constitutiva y funciones objetivo.
+    \item \textbf{Herramientas de interoperabilidad BIM} (2022 -- 2025) -- Herramientas propietarias en C\# / .NET y Python en SOCOTEC para el intercambio directo entre modelos de cálculo estructural y software BIM (APIs de Revit y Robot Structural Analysis).
+\end{itemize}
+
+
+\section{Estancias de investigación}
 \begin{tabularx}{\linewidth}{lX}
-    2017 - 2022 &
-    \textbf{PhD in Civil Engineering} \newline
-    UPC, Barcelona, España \\
-
-    2013 - 2015 &
-    \textbf{Bachelor's degree in Philosophy and Theology} \newline
-    Ponitificia Universtià della Santa Croce, Roma, Italia \\
-
-    2007 - 2013 &
-    \textbf{Ingeniero de Caminos, Canales y Puertos} (Ingeniería superior) \newline
-    UPC, Barcelona, Spain \\
+    2017 &
+    \textbf{Investigador visitante, Centro de Investigación en Matemáticas (CIMAT), México} \newline
+    18/07/2017 -- 19/10/2017. Investigación en formulaciones estabilizadas de elementos finitos para leyes de conservación hiperbólicas, en el marco del WP3 del proyecto FP7-PEOPLE-2013-IRSES TCAiNMaND (612607), Numerical Methods for Real Time Computations. \\
 \end{tabularx}
 
 
-\section{Resumen}
-Ingeniero de Caminos y Doctor en Mecánica Computacional con una trayectoria híbrida que combina la ingeniería estructural avanzada y el desarrollo de software.
-Con experiencia en cerrar la brecha entre la teoría numérica y la aplicación industrial, con dominio de C++, Python, .NET y APIs de BIM.
+\section{Experiencia docente}
+\begin{tabularx}{\linewidth}{lX}
+    2022 -- \enspace \dots &
+    \textbf{Dinámica de estructuras.} 7,5 créditos. Máster en Ingeniería Estructural y de la Construcción. UPC. \\
 
-Como Responsable de Desarrollo e Innovación en SOCOTEC, lideré la automatización de procesos de diseño y la interconectividad entre modelos de cálculo y BIM.
-Mi formación doctoral en métodos numéricos (FEM, interacción fluido-estructura) me permite abordar problemas complejos de simulación física desde el código fuente hasta la solución práctica.
-Actualmente investigador postdoctoral en CIMNE desarrollando formulaciones para nuevos materiales (polímeros electroactivos), busco aplicar mi capacidad técnica en entornos de desarrollo de software de ingeniería de alto nivel.
+    2022 &
+    \textbf{Análisis de estructuras.} 7,5 créditos. Máster en Ingeniería Civil. UPC. \\
+
+    2017 &
+    \textbf{Métodos numéricos.} 6 créditos. Grado en Ingeniería de Materiales. UPC. \\
+\end{tabularx}
 
 
-\section{Core competencies \& technical skills}
+\section{Competencias técnicas e idiomas}
 \begin{description}
-    % \itemsep=-.3em
-    \item[Advanced simulation \& physics]
-        \emph{Computational mechanics}: Expertise in FEM, CFD, Particle-methods, Stabilization of hyperbolic equations.
-        \emph{Structural analysis}: Vibration assessment, Disproportional collapse, CFD for Fire/Wind engineering, non-linear structural analysis.
-        \emph{Ocean \& coastal}: Shallow water equations modelling, landslide-generated waves simulation.
-    \item[Scientific programming \& automation]
-        \emph{Languages}: C++ (high-performance solvers), Python \& Julia (Data processing/Scripting), C\# / .NET (Windows ecosystem).
-        \emph{Plattforms}: Windows, Linux.
-        \emph{BIM development}: Advanced interoperability using Revit API and Robot Structural Analysis API.
-        \emph{Version control}: Git, CI/CD workflows.
-    \item[Languages] Spanish (native) - Catalan (Native) - English (C1) - Italian (B1)
+    \item[Mecánica computacional]
+        Método de elementos finitos, mecánica de sólidos no lineal y modelización constitutiva en grandes deformaciones, acoplamiento multifísico, CFD, métodos de partículas, formulaciones estabilizadas para ecuaciones hiperbólicas, ecuaciones de aguas poco profundas.
+    \item[Programación científica]
+        \emph{Lenguajes}: Julia, C++, Python, C\# / .NET.
+        \emph{Librerías}: Gridap.jl.
+        \emph{Entorno}: Linux y Windows, Git, flujos de trabajo CI/CD.
+    \item[Software de ingeniería]
+        API de Revit y API de Robot Structural Analysis.
+    \item[Idiomas] Español (nativo) - Catalán (nativo) - Inglés (C1) - Italiano (B1)
 \end{description}
 
 
-\section{Employment history}
-\begin{tabularx}{\linewidth}{lX}
-    2025 - \enspace \dots &
-    \textbf{International Centre for Numerical Methods in Engineering (CIMNE)} \newline
-    Postdoctoral researcher \\
+\section{Experiencia industrial seleccionada}
 
-    2022 - \enspace \dots &
-    \textbf{Universitat Politècnica de Catalunya (UPC)} - School of Civil Engineering \newline
-    Adjunct lecturer \\ 
-
-    2022 - 2025 &
-    \textbf{SOCOTEC Spain} - Buildings and cities \newline
-    Specialist Engineer, Head of Development and Innovation \\
-
-    2017 - 2022 &
-    \textbf{International Centre for Numerical Methods in Engineering (CIMNE)} \newline
-    PhD Candidate (FPI Fellowship) \\
-\end{tabularx}
-
-
-\section{Selected industry projects}
-
-\subsection{Advanced Structural Analysis \& Complex Dynamics}
+\subsection{Análisis estructural avanzado y dinámica compleja}
 \parbox{\linewidth}{
     Mercury Tower, Malta (2024) Zaha Hadid \newline
-    \emph{Reto}: Evaluación de dinámica estructural para una atracción de "teatro volador" (Flying Theatre) en un rascacielos de diseño singular. \newline
-    \emph{Solución}: Realicé el análisis avanzado de vibraciones para garantizar el cumplimiento de estrictos límites de servicio (SLS) y confort humano bajo cargas dinámicas.}
+    \emph{Reto}: Evaluación de dinámica estructural para una atracción de «teatro volador» (Flying Theatre) en un rascacielos de diseño singular. \newline
+    \emph{Solución}: Análisis avanzado de vibraciones para garantizar el cumplimiento de estrictos límites de servicio (ELS) y de confort humano bajo cargas dinámicas.}
 
 \parbox{\linewidth}{
-    New Velindre Cancer Centre, Cardiff (2022-2025) SACYR \newline
-    \emph{Retos}: Diseño de infraestructura crítica sanitaria con requisitos estrictos de aislamiento y seguridad ante accidentes. \newline
-    \emph{Soluciones}: Lideré los estudios de vibraciones para el aislamiento de equipos médicos de alta sensibilidad (MRI/Escáneres) asegurando la operatividad del centro y de robustez frente al colapso progresivo.}
+    New Velindre Cancer Centre, Cardiff (2022 -- 2025) SACYR \newline
+    \emph{Retos}: Diseño de infraestructura crítica sanitaria con requisitos estrictos de aislamiento y de seguridad ante acciones accidentales. \newline
+    \emph{Soluciones}: Dirección de los estudios de vibraciones para el aislamiento de equipos médicos de alta sensibilidad (MRI/escáneres) y del análisis de robustez frente al colapso progresivo, asegurando la operatividad del centro.}
 
-\subsection{Multiphysics and forensic analysis}
+\subsection{Análisis multifísico y forense}
 \parbox{\linewidth}{
-    Análisis Termo-mecánico (2023) SOCOTEC Francia \newline
-    Ejecución de simulaciones acopladas CFD-Estructural para predecir modos de ruina en naves industriales bajo cargas de fuego, modelando deformaciones termo-plásticas.}
+    Análisis termomecánico (2023) SOCOTEC Francia \newline
+    Simulaciones acopladas CFD-estructural para predecir modos de ruina en naves industriales bajo cargas de fuego, modelando deformaciones termoplásticas.}
 
 \parbox{\linewidth}{
     Monasterio de Pedralbes (2024) Patrimonio \newline
-    Análisis forense de patologías mediante modelado numérico de la propagación de grietas y diseño de propuestas correctivas para la estabilización de la cúpula histórica (S. XV).}
+    Análisis forense de patologías mediante modelado numérico de la propagación de grietas y diseño de medidas correctivas para la estabilización de la cúpula histórica (s.~XV).}
 
 \parbox{\linewidth}{
-    Residencial Torre Garellano (2025) Arup \newline
-    Análisis CFD para la determinación de cargas de viento en fachada en edificación de gran altura.}
+    Torre residencial Garellano (2025) Arup \newline
+    Análisis de dinámica de fluidos computacional (CFD) para determinar las cargas de viento sobre la fachada de un complejo residencial de gran altura.}
 
-\subsection{Computational Design \& BIM Automation (R\&D)}
+\subsection{Diseño computacional y automatización BIM (I+D)}
 \parbox{\linewidth}{
-    Head of Development \& Innovation (2022-2025) SOCOTEC Spain - Buildings \& cities \newline
-    Automatización: Desarrollo de algoritmos propios (C\# / .NET / Python) para la interoperabilidad directa entre modelos de cálculo y software BIM (Revit/Robot), eliminando el retrabajo manual.}
+    Responsable de desarrollo e innovación (2022 -- 2025) SOCOTEC Spain - Edificación y ciudades \newline
+    Desarrollo de algoritmos propios (C\# / .NET / Python) para la interoperabilidad directa entre modelos de cálculo y software BIM (Revit/Robot), eliminando el retrabajo manual y los errores de transcripción de datos.}
 
 \parbox{\linewidth}{
-    Consultor externo (2024 - 2025) Hormipresa \newline
-    Control de Calidad: Implementación de procesos automatizados para la revisión de conjuntos de izado en prefabricados, optimizando la seguridad y reduciendo tiempos de revisión técnica.}
-
-
-
-\section{Publicaciones}
-\nocite{*}
-\printbibliography[heading={subbibliography}, title={Artículos en revistas}, type=article]
-\printbibliography[heading={subbibliography}, title={Tesis}, type=thesis]
-\printbibliography[heading={subbibliography}, title={Presentaciones en congresos}, type=inproceedings]
-
-
-\section{Estancias en centros extranjeros}
-\textbf{Centro de Investigación en Matemáticas} Purpose: Research. Comparable tasks: WP3 of project
-TCA\-iNMaND-PIRSES-GA-2013-612607 Numerical Methods for Real Time Computations Research on stabilized
-formulations the Finite Element Method applied to hyperbolic conservation laws. 18/07/2017 - 19/10/2017.
-
-
-\section{Actividad docente}
-\begin{tabularx}{\linewidth}{lX}
-    2022 - today &
-    \textbf{Dinámica de estructuras.} 7'5 Créditos. Titulación: Máster en Ingeniería Estructural y de la Construcción. UPC. \\
-
-    2022 - 2022 &
-    \textbf{Análisis de estructuras.} 7'5 Créditos. Titulación: Máster en Ingeniería Civil. UPC. \\
-
-    2017 - 2017 &
-    \textbf{Métodos numéricos.} 6 Créditos. Titulación: Grado en Ingeniería de Materiales. UPC. \\
-\end{tabularx}
-
-
-\printbibliography[heading={bibintoc}, title={Participación en proyctos de I+D+i}, type=project]
+    Consultor externo (2024 -- 2025) Hormipresa \newline
+    Implementación de procesos automatizados para la revisión de conjuntos de izado en elementos prefabricados de hormigón, optimizando la seguridad y reduciendo los tiempos de revisión técnica.}
 
 
 \section{Divulgación}
-\begin{tabularx}{\linewidth}{l}
-    \parbox{\linewidth}{
-        Curso: Sostenibilidad de las estructuras. Criterios para la descarbonización. \\
-        Entidad promotora: Asociación de Consultores de Estructuras (ACE) \\
-        Entidad organizadora: Fundació Privada Institut d'Estudis Estructurals \\
-        Fechas: 16/10/2024 - 13/11/2024
-    }
-\end{tabularx}
-
-
-\section{Otros}
-\begin{itemize}
-    \itemsep=-.3em
-    \item \textbf{Palabras clave:} Mecánica computacional, Ingeniería de viento y fuego, Ingeniería marítima, Análisis de vibraciones
-    \item \textbf{Programación:} C++, Python, C\#, .NET
-    \item \textbf{Herramientas:} Robot Structural Analysis API, Revit API
-    \item \textbf{Otros:} ENVISION SP 2023-2024
-\end{itemize}
+\textbf{Asociación de Consultores de Estructuras (ACE)}: ponente en «Sostenibilidad de las estructuras. Criterios para la descarbonización», Fundació Privada Institut d'Estudis Estructurals (2024, 2025).
 
 
 \end{document}
