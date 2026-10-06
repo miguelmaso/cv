@@ -24,6 +24,7 @@
 *.bcf
 *.blg
 *-blx.bib
+*.bbl-SAVE-ERROR
 
 # build auxiliary files:
 *.fdb_latexmk
