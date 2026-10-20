@@ -8,9 +8,16 @@
 \RequirePackage[pagestyles]{titlesec} % it also loads titleps
 \RequirePackage{parskip} % avoiding indent at the begining of paragraph
 \RequirePackage{tabularx} % tabular with auto-adjusted column width
+\RequirePackage{ltablex} % combine the features of tabularx with longtable
+\keepXColumns                   % X columns always take the full specified width
+\setlength{\LTpre}{0pt}         % no extra space above longtables
+\setlength{\LTpost}{0pt}        % no extra space below
+\setlength{\LTleft}{0pt}        % left-aligned instead of centred
+\setlength{\LTright}{0pt}
 \RequirePackage[colorlinks=true, allcolors=black]{hyperref}
 \RequirePackage{csquotes} % support for quotes depending language
 \RequirePackage{fontawesome5} % web icons
+\RequirePackage{needspace} % avoid orphan section titles
 
 \renewcommand{\sfdefault}{qhv} % TeX Gyre Heros (Helvetica-like, better support than phv)
 
@@ -38,6 +45,8 @@
 
 \renewcommand{\arraystretch}{1.3} % adding more space between tabular rows
 
+\renewcommand{\bibdaterangesep}{\addspace\textendash\addspace} % Delimiter for range of dates (see datamodel `project` in cv.dbx)
+\DefineBibliographyExtras{spanish}{\protected\def\bibrangedash{-}} % Allow line break on Spanish bibliography range 
 \setlength\bibitemsep{8pt} % space between bib entries
 \setlength\bibhang{0pt} % removing indentation
 
